@@ -20,11 +20,17 @@ export default function Hero() {
 
             <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-700/20 blur-[120px] rounded-full" />
 
-            <div className="max-w-7xl mx-auto w-full px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto w-full px-6 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
                 {/* LEFT */}
 
                 <motion.div
+                className="
+      order-2
+      lg:order-1
+      text-center
+      lg:text-left
+    "
                     initial={{ opacity: 0, x: -80 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
@@ -34,7 +40,12 @@ export default function Hero() {
                         MERN Stack Developer & AI Automation Engineer
                     </p>
 
-                    <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+                    <h1 className="text-4xl
+    sm:text-5xl
+    md:text-6xl
+    lg:text-7xl
+    font-extrabold
+    leading-tight">
 
                         Hi, I'm
 
@@ -46,7 +57,14 @@ export default function Hero() {
 
                     </h1>
 
-                    <p className="mt-8 text-gray-300 text-lg leading-8 max-w-xl">
+                    <p className="mt-8
+    text-gray-300
+    text-base
+    md:text-lg
+    leading-8
+    max-w-xl
+    mx-auto
+    lg:mx-0">
 
                         I build scalable MERN applications,
                         REST APIs and AI-powered automation
@@ -64,7 +82,13 @@ export default function Hero() {
 
                     {/* Buttons */}
 
-                    <div className="mt-10 flex flex-wrap gap-4">
+                    <div className="mt-10
+    flex
+    flex-col
+    sm:flex-row
+    justify-center
+    lg:justify-start
+    gap-4">
 
                         <a
                             href="#contact"
@@ -107,7 +131,12 @@ export default function Hero() {
 
                     {/* Social Icons */}
 
-                    <div className="flex gap-6 mt-10 text-3xl">
+                    <div className=" flex
+    justify-center
+    lg:justify-start
+    gap-6
+    mt-10
+    text-3xl">
 
                         <a
                             href="https://github.com/Mevada-Krutin"
@@ -142,7 +171,10 @@ export default function Hero() {
                     initial={{ opacity: 0, x: 80 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="flex justify-center"
+                    className="flex justify-center  order-1
+      lg:order-2
+      mb-10
+      lg:mb-0"
                 >
 
                     <div className="relative">
@@ -162,16 +194,22 @@ export default function Hero() {
                             <Image
                                 src="/profile.jpeg"
                                 alt="Krutin"
-                                width={280}
-                                height={280}
+                                width={240}
+                                height={240}
                                 priority
                                 className="
                   relative
-                  rounded-full
-                  border-4
-                  border-cyan-400
-                  shadow-[0_0_40px_rgba(34,211,238,.4)]
-                  object-cover
+rounded-full
+border-4
+border-cyan-400
+shadow-[0_0_40px_rgba(34,211,238,.4)]
+object-cover
+w-52
+h-52
+md:w-64
+md:h-64
+lg:w-72
+lg:h-72
                 "
                             />
 
@@ -193,12 +231,14 @@ export default function Hero() {
                     duration: 2,
                 }}
                 className="
-          absolute
-          bottom-8
-          left-1/2
-          -translate-x-1/2
-          text-gray-400
-          text-sm
+          hidden
+lg:block
+absolute
+bottom-8
+left-1/2
+-translate-x-1/2
+text-gray-400
+text-sm
         "
             >
                 ↓ Scroll Down
