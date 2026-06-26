@@ -25,7 +25,7 @@ export default function Hero() {
                 {/* LEFT */}
 
                 <motion.div
-                className="
+                    className="
       order-2
       lg:order-1
       text-center
@@ -105,7 +105,7 @@ export default function Hero() {
                             hover:scale-105
                             "
                         >
-                            Hire Me
+                            Contact Me
                         </a>
 
                         <a
