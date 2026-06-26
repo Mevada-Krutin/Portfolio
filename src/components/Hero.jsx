@@ -93,6 +93,9 @@ export default function Hero() {
                         <a
                             href="#contact"
                             className="
+                            inline-flex
+                            items-center
+                            justify-center
                             px-8
                             py-4
                             rounded-xl
@@ -103,6 +106,7 @@ export default function Hero() {
                             transition-all
                             duration-300
                             hover:scale-105
+                            cursor-pointer
                             "
                         >
                             Contact Me
