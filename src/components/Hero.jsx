@@ -92,6 +92,10 @@ export default function Hero() {
 
                         <a
                             href="#contact"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                            }}
                             className="
                             inline-flex
                             items-center
@@ -109,11 +113,15 @@ export default function Hero() {
                             cursor-pointer
                             "
                         >
-                            Contact Me
+                            Hire Me
                         </a>
 
                         <a
                             href="#projects"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                            }}
                             className="
                             inline-flex
                             items-center
@@ -125,6 +133,7 @@ export default function Hero() {
                             py-4
                             hover:bg-cyan-500
                             transition
+                            cursor-pointer
                             "
                         >
                             View Projects
