@@ -94,7 +94,11 @@ export default function Hero() {
                             href="#contact"
                             onClick={(e) => {
                                 e.preventDefault();
-                                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                                const section = document.getElementById("contact");
+                                if (section) {
+                                    const offset = section.offsetTop - 80;
+                                    window.scrollTo({ top: offset, behavior: "smooth" });
+                                }
                             }}
                             className="
                             inline-flex
@@ -113,14 +117,18 @@ export default function Hero() {
                             cursor-pointer
                             "
                         >
-                            Hire Me
+                            Contact Me
                         </a>
 
                         <a
                             href="#projects"
                             onClick={(e) => {
                                 e.preventDefault();
-                                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                                const section = document.getElementById("projects");
+                                if (section) {
+                                    const offset = section.offsetTop - 80;
+                                    window.scrollTo({ top: offset, behavior: "smooth" });
+                                }
                             }}
                             className="
                             inline-flex
