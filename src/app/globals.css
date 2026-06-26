@@ -1,26 +1,149 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ----------------------------
+   Global Settings
+---------------------------- */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(6,182,212,.18),
+      transparent 35%),
+
+    radial-gradient(circle at top right,
+      rgba(59,130,246,.15),
+      transparent 35%),
+
+    radial-gradient(circle at bottom,
+      rgba(168,85,247,.12),
+      transparent 40%),
+
+    #020617;
+}
+
+/* ----------------------------
+   Animated Background
+---------------------------- */
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -2;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59,130,246,.18), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(14,165,233,.18), transparent 30%),
+    radial-gradient(circle at 70% 80%, rgba(99,102,241,.15), transparent 30%),
+    radial-gradient(circle at 10% 90%, rgba(37,99,235,.12), transparent 30%);
+
+  animation: moveBackground 18s ease-in-out infinite alternate;
+}
+
+@keyframes moveBackground {
+
+  0% {
+    transform: translate(0px,0px) scale(1);
+  }
+
+  50% {
+    transform: translate(-40px,-20px) scale(1.08);
+  }
+
+  100% {
+    transform: translate(30px,20px) scale(1);
+  }
+}
+
+/* ----------------------------
+   Grid Overlay
+---------------------------- */
+
+body::after {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+
+  mask-image: radial-gradient(circle, white 20%, transparent 95%);
+}
+
+/* ----------------------------
+   Scrollbar
+---------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* ----------------------------
+   Selection
+---------------------------- */
+
+::selection {
+  background: #2563eb;
+  color: white;
+}
+
+/* ----------------------------
+   Images
+---------------------------- */
+
+img {
+  user-select: none;
+}
+
+/* ----------------------------
+   Sections
+---------------------------- */
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* ----------------------------
+   Reusable Container
+---------------------------- */
+
+.container-custom {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
