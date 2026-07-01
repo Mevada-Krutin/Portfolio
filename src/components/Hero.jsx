@@ -96,8 +96,8 @@ export default function Hero() {
                                 e.preventDefault();
                                 const section = document.getElementById("contact");
                                 if (section) {
-                                    const offset = section.offsetTop - 80;
-                                    window.scrollTo({ top: offset, behavior: "smooth" });
+                                    const top = section.getBoundingClientRect().top + window.scrollY - 80;
+                                    window.scrollTo({ top, behavior: "smooth" });
                                 }
                             }}
                             className="
@@ -126,8 +126,8 @@ export default function Hero() {
                                 e.preventDefault();
                                 const section = document.getElementById("projects");
                                 if (section) {
-                                    const offset = section.offsetTop - 80;
-                                    window.scrollTo({ top: offset, behavior: "smooth" });
+                                    const top = section.getBoundingClientRect().top + window.scrollY - 80;
+                                    window.scrollTo({ top, behavior: "smooth" });
                                 }
                             }}
                             className="
