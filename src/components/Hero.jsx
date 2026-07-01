@@ -16,9 +16,9 @@ export default function Hero() {
 
             {/* Background Glow */}
 
-            <div className="absolute top-32 right-10 w-72 h-72 bg-cyan-500/20 blur-[120px] rounded-full" />
+            <div className="pointer-events-none absolute top-32 right-10 w-72 h-72 bg-cyan-500/20 blur-[120px] rounded-full" />
 
-            <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-700/20 blur-[120px] rounded-full" />
+            <div className="pointer-events-none absolute bottom-20 left-10 w-72 h-72 bg-blue-700/20 blur-[120px] rounded-full" />
 
             <div className="max-w-7xl mx-auto w-full px-6 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
@@ -202,7 +202,7 @@ export default function Hero() {
 
                         {/* Glow */}
 
-                        <div className="absolute inset-0 rounded-full bg-cyan-500 blur-3xl opacity-25 animate-pulse" />
+                        <div className="pointer-events-none absolute inset-0 rounded-full bg-cyan-500 blur-3xl opacity-25 animate-pulse" />
 
                         <motion.div
                             animate={{ y: [-10, 10, -10] }}
